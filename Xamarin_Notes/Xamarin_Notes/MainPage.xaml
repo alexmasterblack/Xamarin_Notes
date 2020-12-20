@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_Notes.MainPage"
+             Title="Notes">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <SearchBar 
+                x:Name="FindNote"
+                Placeholder="Поиск заметок"
+                Grid.Row="0"
+                WidthRequest="350"
+                Margin="10, 10, 10, 10"
+                TextChanged="FindNote_TextChanged"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"/>
+            <ScrollView Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout x:Name="LeftNotes"
+                                 Grid.Column="0"
+                                 VerticalOptions="Start"/>
+
+                    <StackLayout x:Name="RightNotes"
+                                 Grid.Column="1"
+                                 VerticalOptions="Start"/>
+                </Grid>
+            </ScrollView>
+        </Grid>
+        
+        <Button x:Name="Add"
+                Text="+"
+                CornerRadius="40"
+                HeightRequest="60"
+                WidthRequest="60"
+                BackgroundColor="skyblue"
+                TextColor="White"
+                HorizontalOptions="End" 
+                VerticalOptions="End"
+                Margin="10"
+                Clicked="Add_Clicked"/>
+    </Grid>
+
+</ContentPage>
