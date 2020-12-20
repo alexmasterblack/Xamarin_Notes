@@ -14,6 +14,7 @@ namespace Xamarin_Notes
     {
         public DateTime NowTime;
         public string NoteText { get; set; }
+        public string memory = "";
         public EditorPage()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Xamarin_Notes
         {
             NowTime = DateTime.Now;
             NoteText = FieldNote.Text;
+            memory = "";
             Navigation.PopAsync();
         }
     }

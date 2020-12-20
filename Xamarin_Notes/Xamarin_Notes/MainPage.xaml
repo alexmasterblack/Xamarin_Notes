@@ -35,7 +35,18 @@
                 </Grid>
             </ScrollView>
         </Grid>
-        
+        <Button x:Name="Clear"
+                Text="x"
+                CornerRadius="40"
+                HeightRequest="60"
+                WidthRequest="60"
+                FontSize="10"
+                BackgroundColor="skyblue"
+                TextColor="White"
+                HorizontalOptions="End" 
+                VerticalOptions="EndAndExpand"
+                Margin="10, 10, 10, 10"
+                Clicked="Clear_Clicked"/>
         <Button x:Name="Add"
                 Text="+"
                 CornerRadius="40"
@@ -44,9 +55,20 @@
                 BackgroundColor="skyblue"
                 TextColor="White"
                 HorizontalOptions="End" 
-                VerticalOptions="End"
-                Margin="10"
+                VerticalOptions="EndAndExpand"
+                Margin="10, 10, 10, 10"
                 Clicked="Add_Clicked"/>
+        <Button x:Name="Open"
+                Text="||"
+                CornerRadius="40"
+                HeightRequest="60"
+                WidthRequest="60"
+                BackgroundColor="skyblue"
+                TextColor="White"
+                HorizontalOptions="End" 
+                VerticalOptions="EndAndExpand"
+                Margin="10"
+                Clicked="Open_Clicked"/>
     </Grid>
 
 </ContentPage>
